@@ -63,7 +63,7 @@ class ChooseGender extends StatelessWidget {
           child: Column(
             children: [
               Container(height: 160, child: Lottie.asset(manAvatar)),
-              const SizedBox(height: 5),
+               SizedBox(height: MediaQuery.of(context).size.height * 0.006),
               const Text("Male",
                   style: TextStyle(
                       fontSize: 27,
@@ -101,7 +101,7 @@ class ChooseGender extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 160, child: Lottie.asset(womanAvatar)),
-                const SizedBox(height: 5),
+                  SizedBox(height: MediaQuery.of(context).size.height * 0.006),
                 const Text("Female",
                     style: TextStyle(
                         fontSize: 27,
@@ -141,7 +141,8 @@ class ChooseGender extends StatelessWidget {
                   margin: const EdgeInsets.only(top: 22),
                   height: 120,
                   child: Image.asset(otherAvatar)),
-              const SizedBox(height: 25),
+             SizedBox(height: MediaQuery.of(context).size.height * 0.006),
+  SizedBox(height: MediaQuery.of(context).size.height * 0.02),
               const Text("Others",
                   style: TextStyle(
                       fontSize: 27,

@@ -22,21 +22,23 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body:
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center, children: const [
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center, children: const [
         SizedBox(height: 80),
         Text("BMI calculator",
-            style: TextStyle(
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-                color: Colors.purple)),
+              style: TextStyle(
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.purple)),
         Text('Calculate your BMI Smartly',
-            style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                fontStyle: FontStyle.italic,
-                color: Colors.black54)),
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  fontStyle: FontStyle.italic,
+                  color: Colors.black54)),
       ]),
+          ),
     );
   }
 }

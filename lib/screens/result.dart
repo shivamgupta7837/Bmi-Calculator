@@ -1,4 +1,5 @@
 import 'package:bmi_calculator/main.dart';
+import 'package:bmi_calculator/screens/home_page.dart';
 import 'package:flutter/material.dart';
 
 class BmiResult extends StatelessWidget {
@@ -25,8 +26,8 @@ class BmiResult extends StatelessWidget {
         Container(
           padding: const EdgeInsets.only(top: 25),
           margin: const EdgeInsets.only(left: 15, top: 55),
-          height: 200,
-          width: 352,
+          height: MediaQuery.of(context).size.height * 0.28,
+            width: MediaQuery.of(context).size.width * 0.8,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(20),
@@ -73,7 +74,7 @@ class BmiResult extends StatelessWidget {
               ),
             const  SizedBox(height: 10,),
               Padding(
-                padding: const EdgeInsets.only(left:40.0),
+                padding: const EdgeInsets.only(left:35.0),
                 child: Text(
                   bmi(result.toDouble()),
                   textAlign: TextAlign.center,
@@ -89,7 +90,7 @@ class BmiResult extends StatelessWidget {
               maxRadius: 25,
                child: Center(
                  child: IconButton(onPressed: (){
-                  Navigator.pop(context);
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => ChooseGender()));
                  }, icon: const Icon(Icons.restart_alt_rounded,size: 28,)),
                ),
              )

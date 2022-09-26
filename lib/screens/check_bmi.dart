@@ -103,24 +103,28 @@ class _CheckBmiState extends State<CheckBmi> {
                 ),
               ),
               const SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  TextEditingController height = heightController;
-                  TextEditingController weight = weightController;
-                  final isFormValid = _formKey.currentState!.validate();
-                  if (isFormValid) {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                BmiResult(height: height, weight: weight)));
-                  }
-                },
-                style: ElevatedButton.styleFrom(
-                    minimumSize: Size(380, 50), elevation: 8),
-                child: const Text(
-                  "Check your BMI",
-                  style: TextStyle(fontSize: 20),
+              SizedBox(
+                width: MediaQuery.of(context).size.width * 0.88,
+                height: MediaQuery.of(context).size.height * 0.06,
+                child: ElevatedButton(
+                  onPressed: () {
+                    TextEditingController height = heightController;
+                    TextEditingController weight = weightController;
+                    final isFormValid = _formKey.currentState!.validate();
+                    if (isFormValid) {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  BmiResult(height: height, weight: weight)));
+                    }
+                  },
+                  style: ElevatedButton.styleFrom(
+                      elevation: 8),
+                  child: const Text(
+                    "Check your BMI",
+                    style: TextStyle(fontSize: 20),
+                  ),
                 ),
               )
             ],
