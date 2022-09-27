@@ -1,3 +1,4 @@
+import 'package:bmi_calculator/screens/convertor.dart';
 import 'package:bmi_calculator/screens/result.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
@@ -126,7 +127,12 @@ class _CheckBmiState extends State<CheckBmi> {
                     style: TextStyle(fontSize: 20),
                   ),
                 ),
-              )
+              ),
+               SizedBox(height:MediaQuery.of(context).size.height * 0.1),
+              GestureDetector(
+                child: const Text("Don't know your height in meters ?",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,fontWeight: FontWeight.w500),),
+                onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) => Convertor(),)),
+              ),
             ],
           ),
         ),

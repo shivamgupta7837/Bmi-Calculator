@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'home_page.dart';
+import 'choose_gender.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

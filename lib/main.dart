@@ -1,4 +1,4 @@
-import 'package:bmi_calculator/screens/home_page.dart';
+import 'package:bmi_calculator/screens/choose_gender.dart';
 import 'package:bmi_calculator/screens/splash_Screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

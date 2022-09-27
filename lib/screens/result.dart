@@ -1,5 +1,4 @@
-import 'package:bmi_calculator/main.dart';
-import 'package:bmi_calculator/screens/home_page.dart';
+import 'package:bmi_calculator/screens/choose_gender.dart';
 import 'package:flutter/material.dart';
 
 class BmiResult extends StatelessWidget {
@@ -9,13 +8,13 @@ class BmiResult extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    calculateBmi() {
+     calculateBmi() {
       final height = this.height;
       final weight = this.weight;
       final result = double.parse(weight.text) /
           (double.parse(height.text) *
           double.parse(height.text));
-      return result.round();
+       result.round();
     }
 
     var result = calculateBmi();
