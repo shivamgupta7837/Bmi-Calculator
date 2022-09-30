@@ -48,7 +48,7 @@ class _ConvertorState extends State<Convertor> {
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
                 label: Text("Enter height in feet"),
-                  hintText: "Enter your height in feet",
+                  hintText: "Enter your height ",
                   border: OutlineInputBorder()),
             ),
           ),

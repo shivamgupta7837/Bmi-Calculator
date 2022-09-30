@@ -14,7 +14,7 @@ class BmiResult extends StatelessWidget {
       final result = double.parse(weight.text) /
           (double.parse(height.text) *
           double.parse(height.text));
-       result.round();
+       return result.round();
     }
 
     var result = calculateBmi();

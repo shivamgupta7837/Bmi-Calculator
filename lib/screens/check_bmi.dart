@@ -62,7 +62,12 @@ class _CheckBmiState extends State<CheckBmi> {
           key: _formKey,
           child: Column(
             children: [
-              checkMaleOrFeamle(),
+              Container(
+                // height: isOther==false ? 200 : MediaQuery.of(context).size.height * 0.3,
+                height: MediaQuery.of(context).size.height * 0.35,
+                margin: EdgeInsets.only(bottom: 20),
+                child: checkMaleOrFeamle(),
+              ),
               const SizedBox(height: 8),
               const Text(
                 "Enter Your Details",
@@ -129,9 +134,12 @@ class _CheckBmiState extends State<CheckBmi> {
                 ),
               ),
                SizedBox(height:MediaQuery.of(context).size.height * 0.1),
-              GestureDetector(
-                child: const Text("Don't know your height in meters ?",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,fontWeight: FontWeight.w500),),
-                onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) => Convertor(),)),
+              Container(
+                margin: EdgeInsets.only(top: 20),
+                child: GestureDetector(
+                  child: const Text("Don't know your height in meters ?",style: TextStyle(fontSize: 20,fontStyle: FontStyle.italic,fontWeight: FontWeight.w500),),
+                  onTap: ()=> Navigator.push(context, MaterialPageRoute(builder: (context) => Convertor(),)),
+                ),
               ),
             ],
           ),
@@ -142,10 +150,10 @@ class _CheckBmiState extends State<CheckBmi> {
 
   dynamic checkMaleOrFeamle() {
     if (widget.isMale == true) {
-      return Lottie.asset(widget.maleAvatar!, height: 330);
+      return Lottie.asset(widget.maleAvatar!);
     } else if (widget.isFemale == true) {
-      return Lottie.asset(widget.femaleAvatar!, height: 300, width: 430);
+      return Lottie.asset(widget.femaleAvatar!);
     }
-    return Image.asset(widget.otherAvatar!, height: 230, width: 400);
+    return Image.asset(widget.otherAvatar!);
   }
 }

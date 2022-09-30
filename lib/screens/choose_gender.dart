@@ -13,6 +13,7 @@ class ChooseGender extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
+        // centerTitle: true,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [
